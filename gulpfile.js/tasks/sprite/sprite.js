@@ -7,7 +7,7 @@ var gulp =      require('gulp'),
     svg2png =   require('gulp-svg2png'),
     path =      require('path');
 
-var paths: {
+var paths = {
   src: path.join(config.root.src, config.tasks.sprite.entry),
   dest: config.root.base,
   scssDest: path.join(config.root.src, config.tasks.sprite.scssDest),
@@ -15,8 +15,7 @@ var paths: {
   spriteEndLocation: path.join(config.root.base, config.root.dest, config.tasks.sprite.spriteDest)
 };
 
-gulp.task('svgSprite', function () {
-
+var spriteTask = function () {
   var sprite = {
     shape: {
       spacing: {
@@ -30,11 +29,11 @@ gulp.task('svgSprite', function () {
         prefix: '',
         render: {
           scss: {
-            template: './gulp/tasks/sprite/sprite-template.scss',
+            template: './gulpfile.js/tasks/sprite/sprite-template.scss',
             dest: paths.scssDest
           }
         },
-        sprite: paths.spriteDest + config.tasks.sprite.fileName,
+        sprite: paths.spriteDest + "/" + config.tasks.sprite.fileName,
       }
     },
     variables: {
@@ -56,13 +55,14 @@ gulp.task('svgSprite', function () {
   return gulp.src(paths.src)
     .pipe(svgSprite(sprite))
     .pipe(gulp.dest(paths.dest));
+};
 
-});
-
-gulp.task('pngSprite', ['svgSprite'], function() {
+var pngSpriteTask = function() {
   return gulp.src(paths.spriteEndLocation + '/' + config.tasks.sprite.fileName)
     .pipe(svg2png())
     .pipe(gulp.dest(paths.spriteEndLocation));
-});
+};
 
+gulp.task('svgSprite', spriteTask);
+gulp.task('pngSprite', ['svgSprite'], pngSpriteTask);
 gulp.task('sprite', ['pngSprite']);

@@ -8,12 +8,11 @@
 
   "tasks": {
 
-    "webpack": {
+    "js": {
+      "src": "./js",
+      "dest": "./assets/js",
       "entries": {
-        "main": "./js/app.js"
-      },
-      "output": {
-        "path": "./js"
+        "main": "./app.js"
       }
     },
 
@@ -26,7 +25,7 @@
       "entry": "./icons/*.svg",
       "fileName": "sprite.svg",
       "spriteDest": "./assets/img",
-      "scssDest": "./scss/00_bits/_sprite.scss"
+      "scssDest": "./scss/00_bits/_sprites.scss"
     }
 
   }
