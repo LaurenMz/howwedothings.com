@@ -2,10 +2,11 @@ var config = require('../config');
 
 if (!config.tasks.js) { return; }
 
-var gulp =    require("gulp"),
-    gutil =   require("gulp-util"),
-    webpack = require("webpack"),
-    path =    require("path");
+var gulp =         require("gulp"),
+    gutil =        require("gulp-util"),
+    webpack =      require("webpack"),
+    logger = require('../util/logger'),
+    path =         require("path");
 
 var webPackConfig = {
   context: path.resolve(config.root.src, config.tasks.js.src),
@@ -16,23 +17,22 @@ var webPackConfig = {
   }
 };
 
-
-// gulp.task("js", function (callback) {
-//   gutil.log("this", webPackConfig);
-// });
-
-gulp.task("webpack", function (callback) {
+var jsTask = function (callback) {
   var initialCompile = false;
   webpack(webPackConfig).watch({
     aggregateTimeout: 300,
     poll: true
   }, function (err, stats) {
-    if (err) throw new gutil.PluginError("webpack", err);
-    gutil.log("[webpack]", stats.toString({ /* ?? */ }));
+
+    logger(err, stats);
+
     if (!initialCompile) {
-      console.log(__dirname);
       initialCompile = true;
       callback();
     }
+
   });
-});
+}
+
+gulp.task("js", jsTask);
+module.exports = jsTask;

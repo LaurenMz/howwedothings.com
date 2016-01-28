@@ -66,3 +66,5 @@ var pngSpriteTask = function() {
 gulp.task('svgSprite', spriteTask);
 gulp.task('pngSprite', ['svgSprite'], pngSpriteTask);
 gulp.task('sprite', ['pngSprite']);
+
+module.exports = spriteTask;

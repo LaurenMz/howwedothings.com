@@ -1,6 +1,9 @@
 var gulp = require('gulp'),
-    config = require('../config').main;
+    config = require('../config');
 
-gulp.task('watch', ['webpack'], function(callback) {
-  gulp.watch(config.src + '/scss/**/*.scss', ['sass']);
-});
+var watchTask = function(callback) {
+  gulp.watch(config.root.src + '/scss/**/*.scss', ['css']);
+};
+
+gulp.task('watch', ['js'], watchTask);
+module.exports = watchTask;
