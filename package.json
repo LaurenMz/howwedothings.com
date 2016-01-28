@@ -1,37 +1,33 @@
 {
-  "name": "Browncoat",
-  "version": "0.2.2",
-  "description": "The platypus friend framework",
-  "main": "index.php",
+  "name": "NJI_Sampler",
+  "version": "0.1.0",
+  "description": "Building standards for NJI Media",
+  "main": "index.html",
   "scripts": {
-    "test": " "
+    "gulp": "gulp"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:leobauza/browncoat.git"
+    "url": ""
   },
-  "author": "Leo Bauza",
+  "author": "NJI Media",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/leobauza/browncoat/issues"
+    "url": ""
   },
-  "homepage": "http://browncoat.leobauza.com/",
-  "dependencies": {
-  },
+  "homepage": "",
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.8.11",
-    "require-dir": "^0.1.0",
-    "browserify": "9.0.3",
-    "vinyl-transform": "^1.0.0",
-    "watchify": "^2.4.0",
     "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-sass": "^1.3.3",
+    "gulp-sourcemaps": "^1.5.0",
+    "gulp-svg-sprite": "^1.0.18",
+    "gulp-svg2png": "^0.3.0",
     "gulp-util": "^3.0.3",
     "pretty-hrtime": "^1.0.0",
-    "gulp-rename": "^1.2.0",
-    "gulp-svg2png": "^0.3.0",
-    "vinyl": "^0.4.6",
-    "gulp-svg-sprite": "^1.0.18",
-    "gulp-sass": "^1.3.3",
-    "gulp-sourcemaps": "^1.5.0"
+    "require-dir": "^0.1.0",
+    "webpack": "^1.12.12"
   }
 }
