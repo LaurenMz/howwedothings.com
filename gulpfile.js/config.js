@@ -20,7 +20,7 @@ module.exports = {
   sass: {
     entry: src + '/scss/styles.scss',
     dest: dest + '/css',
-    style: 'compressed' // 'expanded'
+    style: 'expanded' // 'compressed'
   },
   sprite: {
     entry: src + '/icons/*.svg',
