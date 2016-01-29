@@ -4,12 +4,13 @@
  */
 
 %btn{
-  @include inlineBlock(20);
-  @include marpad(0, 10px 15px);
+  @include inlineBlock(40);
+  @include marpad(0, 8px 27px 11px);
   @include borderRadius(0px);
   color: $white;
   border: 1px solid darken($default, 10);
-  font-size: $text_size;
+  font-size: 1.4em;
+  letter-spacing: .05em;
   text-align: center;
   cursor: pointer;
   &:hover, &.active {
@@ -21,6 +22,18 @@
     border: 1px solid darken($default, 10);
   }
   &:active {
+
+  }
+  &.-x-small {
+
+  }
+  &.-small {
+
+  }
+  &.-large {
+
+  }
+  &.-x-large {
 
   }
 }
@@ -37,21 +50,6 @@
   &:focus {
     border: 1px solid $highlight;
   }
-}
-
-
-//button sizes
-.btn--large {
-  padding: 15px 25px;
-  font-size: 2em;
-}
-.btn--small {
-  padding: 10px 15px;
-  font-size: 1.4em;
-}
-.btn--xsmall {
-  padding: 5px 10px;
-  font-size: 1.2em;
 }
 
 //button groups

@@ -2,11 +2,12 @@ var config = require('../config');
 
 if (!config.tasks.css) { return; }
 
-var gulp =         require('gulp'),
-    sass =         require('gulp-sass'),
-    handleErrors = require('../util/handleErrors'),
-    sourcemaps =   require('gulp-sourcemaps'),
-    path =         require('path');
+var gulp =          require('gulp'),
+    sass =          require('gulp-sass'),
+    handleErrors =  require('../util/handleErrors'),
+    sourcemaps =    require('gulp-sourcemaps'),
+    path =          require('path'),
+    browserSync =   require('browser-sync');
 
 var paths = {
   src: path.join(config.root.src, config.tasks.css.src),
@@ -19,8 +20,9 @@ var cssTask = function () {
     .pipe(sass())
     .on('error', handleErrors)
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest(paths.dest));
-}
+    .pipe(gulp.dest(paths.dest))
+    .pipe(browserSync.stream());
+};
 
 gulp.task('css', cssTask);
 module.exports = cssTask;

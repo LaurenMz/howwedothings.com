@@ -2,11 +2,12 @@ var config = require('../config');
 
 if (!config.tasks.js) { return; }
 
-var gulp =         require("gulp"),
-    gutil =        require("gulp-util"),
-    webpack =      require("webpack"),
-    logger = require('../util/logger'),
-    path =         require("path");
+var gulp =        require("gulp"),
+    gutil =       require("gulp-util"),
+    webpack =     require("webpack"),
+    logger =      require('../util/logger'),
+    path =        require("path"),
+    browserSync = require("browser-sync");
 
 var webPackConfig = {
   context: path.resolve(config.root.src, config.tasks.js.src),
@@ -25,6 +26,7 @@ var jsTask = function (callback) {
   }, function (err, stats) {
 
     logger(err, stats);
+    browserSync.reload();
 
     if (!initialCompile) {
       initialCompile = true;

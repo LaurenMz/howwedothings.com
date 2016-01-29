@@ -15,3 +15,13 @@
 .box {
   @extend %box;
 }
+
+@media (max-width: 50em) { // 800px
+  .box {
+    margin: 0px 0px 20px;
+    text-align: center;
+    &.l {
+      margin: 0px;
+    }
+  }
+}
