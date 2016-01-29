@@ -103,10 +103,12 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 .38196em;
+  margin: 0px 0px 20px;
+  font-family: $display;
   font-weight: $boldFont;
   text-rendering: optimizelegibility;
-  line-height: 1.2em;
+  text-transform: uppercase;
+  line-height: 1.333333333em;
   color: $text_colour;
   a {
     color: $link_colour;
@@ -127,6 +129,7 @@ h2 {
 }
 h3 {
   font-size: $h3;
+  margin-bottom: 28px;
 }
 h4 {
   font-size: $h4;

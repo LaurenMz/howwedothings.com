@@ -5,11 +5,13 @@
 
 //greyscale
 $white: #fff;
+$off_white: #f2eeed;
+$grey: #dedede;
 $black: #000;
 
 //gen
-$brand: #8790A5;
-$brand_alt: darken($brand, 10);
+$brand: #0f314e;
+$highlight: #bc9d5f;
 $body_bg: $white;
 
 //links
@@ -31,8 +33,8 @@ $warning: #f0ad4e;
 $error: #d9534f;
 
 $base_size: 62.5%;
-$display: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$sans_serif: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$display: "Montserrat", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$sans_serif: "Didact Gothic", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $serif: "Georgia", "Times New Roman", Times, serif;
 $code: Menlo,Monaco,Consolas,"Courier New",monospace;
 //$serif: "Palatino Linotype", "Book Antiqua", Palatino, serif;
@@ -42,9 +44,9 @@ $global_family: $sans_serif; //not everything inherits from the body...so we hav
 $text_size: 1.6em;
 $text_line_height: 1.6em;
 
-$h1: 4.8em;
-$h2: 3.6em;
-$h3: 2.8em;
+$h1: 9.0em;
+$h2: 3.0em;
+$h3: 1.8em;
 $h4: 2.2em;
 $h5: 1.8em;
 $h6: 1.4em;
