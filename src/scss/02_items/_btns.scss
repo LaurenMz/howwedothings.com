@@ -41,11 +41,12 @@
 //button types
 .btn--main {
   @extend %btn;
-  // @include gradient($highlight, lighten($highlight, 2));
+  @include transition(all .5s);
   background: $highlight;
   border-color: $highlight;
   &:hover, &.active {
-    background: $highlight;
+    background: darken($highlight, 20);
+    border-color: darken($highlight, 20);
   }
   &:focus {
     border: 1px solid $highlight;
