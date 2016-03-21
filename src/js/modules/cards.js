@@ -121,7 +121,7 @@ Cards.prototype.addCards = function (offset, amount) {
 
   // Add to DOM.
   _.each(rows, function (row, k) {
-    self.$el.find(".section__body").append("<div class=\"row-fluid--alt\">" + row + "</div>");
+    self.$el.find(".section__body").append("<div class=\"row-alt\">" + row + "</div>");
   });
 
   self.moreOffsetY = Math.ceil(self.$moreEl.offset().top);
