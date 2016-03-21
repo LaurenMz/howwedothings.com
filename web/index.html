@@ -22,8 +22,8 @@
   <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
-  <section class="container">
-    <div id="properties" class="section -titled">
+  <section class="section">
+    <div id="properties" class="container">
       <h2>Hilton Properties Worldwide</h2>
       <div class="section__body"></div>
       <div class="btns--center">
@@ -54,7 +54,29 @@
     </div>
   </section>
 
+  <script id="property" type="text/template">
+    <% if ((key + 1) % 5 === 0) { %>
+    <a href="#" class="span2 box--flipcard l">
+    <% } else { %>
+    <a href="#" class="span2 box--flipcard">
+    <% } %>
+      <div class="box__overlay">
+        <div class="inner">
+          <h3><%= title %></h3>
+          <span class="btn--main">View Fact</span>
+        </div>
+      </div>
+      <div class="flipper">
+        <img class="front" src="<%= image %>" alt="State, Country" />
+        <div class="box__flipside back">
+          <p><%= body %></p>
+        </div>
+      </div>
+    </a>
+  </script>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
   <script src="/assets/js/main.js"></script>
+
 </body>
 </html>
