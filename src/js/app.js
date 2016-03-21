@@ -1,6 +1,7 @@
 "use strict";
 
-var Sample = require('./modules/sample'),
-    sample = new Sample();
+var Cards = require('./modules/cards');
 
-sample.method();
+// Property Cards.
+var cards = new Cards();
+cards.addCards(0, 20);
