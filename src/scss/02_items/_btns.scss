@@ -54,6 +54,12 @@
 }
 
 //button groups
+.btns--center {
+  text-align: center;
+  %btn {
+  }
+}
+
 .btn-group {
   margin: 0 0 20px;
   %btn{

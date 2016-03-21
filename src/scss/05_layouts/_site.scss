@@ -2,9 +2,22 @@
  * 05_layouts/site
  * Main site layout styles
  */
+
 .container {
   max-width: 960px;
   margin: 0 auto;
+}
+
+.section {
+  padding: 64px 20px 0px;
+  background: $off_white;
+  .container {
+    border-bottom: 2px solid $grey;
+    padding-bottom: 72px;
+  }
+  &.-alt {
+    padding-top: 53px;
+  }
 }
 
 /*
