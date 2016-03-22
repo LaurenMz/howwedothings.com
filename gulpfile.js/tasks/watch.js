@@ -14,5 +14,5 @@ var watchTask = function(callback) {
   gulp.watch(config.root.dest + "/*.html").on('change', browserSync.reload);
 };
 
-gulp.task('watch', ['js'], watchTask);
+gulp.task('watch', ['sprite','css','js'], watchTask);
 module.exports = watchTask;
