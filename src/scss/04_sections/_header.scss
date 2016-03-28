@@ -3,48 +3,48 @@
  * Styles for header section
  */
 .site__header {
-	height: 100px;
-	background: $off_white;
-	border-top: 7px solid #8b836e;
+    height: 100px;
+    background: $off_white;
+    border-top: 7px solid #8b836e;
 }
 
 .logo--main {
-	position: relative;
-	display: inline-block;
-	width: 303px;
-	margin: 0;
-	top: -7px;
-	left: 0;
-	background: url(../img/logo.png) no-repeat;
-	text-indent: -9999px;
+    position: relative;
+    display: inline-block;
+    width: 303px;
+    margin: 0;
+    top: -7px;
+    left: 0;
+    background: url(../img/logo.png) no-repeat;
+    text-indent: -9999px;
 }
 
 .header__info {
-	padding: 34px 0 0;
-	float: right;
+    padding: 34px 0 0;
+    float: right;
 
-	.header__text, .btn--main {
-		text-transform: uppercase;
-	}
+    .header__text, .btn--main {
+        text-transform: uppercase;
+    }
 
-	.header__text {
-		display: inline-block;
-		margin-right: 25px;
-	}
+    .header__text {
+        display: inline-block;
+        margin-right: 25px;
+    }
 }
 
 @media (max-width: 50em) { // 800px
-	.site__header {
-		height: auto;
-		text-align: center;
-		padding: 0 20px;
-	}
+    .site__header {
+        height: auto;
+        text-align: center;
+        padding: 0 20px;
+    }
 
-	.header__info {
-		float: none;
+    .header__info {
+        float: none;
 
-		.header__text {
-			display: block;
-		}
-	}
+        .header__text {
+            display: block;
+        }
+    }
 }
