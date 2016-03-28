@@ -4,5 +4,84 @@
  */
 
 .site__footer {
+	background: $off_white;
+	padding: 25px 20px;
+}
 
+.footer__logos {
+	position: relative;
+	padding: 0;
+	text-align: center;
+
+	.logo {
+		display: inline-block;
+		height: 49px;
+		background: url(../img/footer_logos.png) no-repeat;
+	}
+
+	.hilton {
+		left: 0;
+		width: 65px;
+		background-position: 0 0;
+	}
+	.waldorf {
+		left: 66px;
+		width: 58px;
+		background-position: -65px 0;
+	}
+	.conrad {
+		left: 125px;
+		width: 75px;
+		background-position: -127px 0;
+	}
+	.canopy {
+		left: 201px;
+		width: 80px;
+		background-position: -208px 0;
+	}
+	.curio {
+		left: 282px;
+		width: 75px;
+		background-position: -292px 0;
+	}
+	.doubletree {
+		left: 358px;
+		width: 75px;
+		background-position: -370px 0;
+	}
+	.embassy {
+		left: 434px;
+		width: 70px;
+		background-position: -446px 0;
+	}
+	.gardeninn {
+		left: 505px;
+		width: 70px;
+		background-position: -520px 0;
+	}
+	.hampton {
+		left: 576px;
+		width: 60px;
+		background-position: -600px 0;
+	}
+	.homewood {
+		left: 637px;
+		width: 70px;
+		background-position: -670px 0;
+	}
+	.home2 {
+		left: 708px;
+		width: 70px;
+		background-position: -747px 0;
+	}
+	.grand {
+		left: 779px;
+		width: 80px;
+		background-position: -825px 0;
+	}
+	.hhonors {
+		left: 900px;
+		width: 65px;
+		background-position: -910px 0;
+	}
 }
