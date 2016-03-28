@@ -17,6 +17,7 @@
 }
 
 .box--flipcard {
+  @extend %group;
   display: block;
   position: relative;
   padding-bottom: 18.99996%;
@@ -151,7 +152,7 @@
 
 @media (max-width: 59.9375em) {
   .box--flipcard {
-    @extend %group;
+    // @extend %group;
     padding: 0px;
     .flipper {
       position: relative;
